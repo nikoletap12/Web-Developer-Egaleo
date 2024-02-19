@@ -7,6 +7,7 @@ html{
 body{
 	max-width:1920px;
 	height:auto;
+	cursor:none;
 	
 }
 	
@@ -21,6 +22,38 @@ body{
     font-family: 'OSWALD', sans-serif;	
 	height:auto;
 }
+::selection {
+    background-color: #521919;
+	color:white;
+    
+}
+
+::-moz-selection {
+    background-color: white;
+    color: black;
+}
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color:#ffffff90;
+  }
+  
+  .cursor-outline {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+  }
+  
+  .cursor-dot,
+  .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
 
 .navbar-brand{
 	color:white!important;
@@ -88,6 +121,11 @@ body{
 	display:flex;
 	flex-direction:row;
 	justify-content:flex-start;
+	transition:0.3s;
+}
+.bigbox:hover{
+	background-color: #ffffff70;
+	
 }
 .part1{
 	width:30%;
@@ -138,7 +176,12 @@ body{
 	display:grid;
 	place-items:center;
 	border-style:inset;
-	border-width:0.1vw;
+	border-width:1px;;
+	transition:0.7s;
+}
+.box:hover{
+	font-size:0.85rem;
+	
 }
 .section25{
 	margin-top:100px;
@@ -199,6 +242,10 @@ body{
 	justify-content:center;
 	flex-direction:row;
 	font-size:1.2rem;	
+	transition:0.3s;
+}
+.bigbox2:hover{
+background-color:#ffffff70;
 }
 .mini-container{
 
@@ -220,10 +267,21 @@ body{
 	margin-top:10vh;
 	opacity:0.8;
 	font-size:1.5rem;
+	transition:0.3s;
 }
 .contact{
 	color:white;
 	}
+.circle{
+	position:fixed;
+	height:40px;
+	width:40px;
+	border:1px solid white;
+	border-radius:100%;
+	top:-20px;
+	left:-20px;
+	pointer-events:none;
+}
 
 .footer{
 	background-color:#521919;
@@ -304,7 +362,7 @@ textarea , .textarea1{
 	border-style:solid;
 	border-width:2px;
 	border-radius:10px;}
-}
+
 
 label{
 	display:block;
@@ -414,6 +472,13 @@ label{
 	width:20%;
 	margin-left:40%;
 	margin-right:40%;
+	text-decoration: none;
+	transition: 0.4s;
+}
+.getnow:hover{
+	background-color: #ffffff80;
+	color:#521919;
+	text-decoration: underline;
 }
 .introduction{
 	height:auto;
@@ -915,4 +980,4 @@ i{
 .question{
 	height:200px;
 }
-}s
+}
